@@ -1,6 +1,6 @@
 
-import { createBox } from './components/box';
-import { createSphere } from './components/sphere';
+import createBox from './components/box';
+import createSphere from './components/sphere';
 
 setTimeout(() => {
   createBox('webgl-container-1');
