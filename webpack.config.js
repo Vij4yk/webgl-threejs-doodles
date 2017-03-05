@@ -39,6 +39,12 @@ module.exports = {
         include: path.resolve(__dirname, 'app'),
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.dae$/,
+        include: path.resolve(__dirname, 'app/assets'),
+        exclude: /node_modules/,
+        loader: 'file'
       }
     ]
   },

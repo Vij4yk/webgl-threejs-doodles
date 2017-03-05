@@ -5,7 +5,7 @@
   "description": "Boilerplate cloned from https://github.com/ruanyf/react-babel-webpack-boilerplate",
   "scripts": {
     "precommit": "npm run lint",
-    "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js --format=node_modules/eslint-formatter-pretty .",
+    "lint": "eslint --cache --ignore-path .eslintignore --ext .jsx,.js --format=node_modules/eslint-formatter-pretty .",
     "test": "npm run lint",
     "build": "webpack",
     "start": "webpack-dev-server --devtool eval --progress --hot --content-base app",
