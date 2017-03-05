@@ -46,6 +46,8 @@ import { Scene, WebGLRenderer, CanvasRenderer,
   // recursive function;
   function render() {
 
+    box.rotation.y += 0.01;
+    box.rotation.x += 0.01;
     renderer.render(scene, camera);
     /**
      * https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
