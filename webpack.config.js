@@ -14,7 +14,8 @@ module.exports = {
   entry: [
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080',
-    path.resolve(__dirname, 'app/main.js')
+    path.resolve(__dirname, 'app/main.js'),
+    path.resolve(__dirname, 'app/main.scss')
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -23,7 +24,17 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, include: path.resolve(__dirname, 'app'), loader: 'style-loader!css-loader' },
+      {
+        // Post-css loader and its plugins.
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'app'),
+        loaders: [
+          'style',// inserts raw css into styles elements.
+          'css', // css-loader parses css files resolves url() expressions.
+          'sass'
+        ]
+      },
+      // { test: /\.css$/, include: path.resolve(__dirname, 'app'), loader: 'style-loader!css-loader' },
       { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' }
     ]
   },

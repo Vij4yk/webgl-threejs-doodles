@@ -1,0 +1,19 @@
+
+@import '../node_modules/material-design-lite/material.min.css';
+
+
+body {
+  background: pink;
+}
+
+.mld-layout_header , .mdl-layout__header-row {
+  background-color: midnightblue !important;
+}
+
+
+
+#webgl-container {
+  text-align: center;
+  padding: 5%;
+}
+

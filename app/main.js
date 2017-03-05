@@ -11,7 +11,7 @@ import { Scene, WebGLRenderer, CanvasRenderer,
   var camera, box;
 
   function initScene() {
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
     document.getElementById('webgl-container').appendChild(renderer.domElement);
 
     scene.add(light);
