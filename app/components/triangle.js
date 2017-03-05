@@ -1,16 +1,16 @@
 import {
   Scene, WebGLRenderer, CanvasRenderer,
   AmbientLight, PerspectiveCamera, Mesh,
-  SphereGeometry, MeshBasicMaterial
+  Geometry, Vector3, Face3
 } from 'three';
 
-export default function createSphere(elementId) {
+export default function createTriangle(elementId) {
   const scene = new Scene();
   const renderer = window.WebGLRenderingContext ?
   new WebGLRenderer({ alpha: true }) : new CanvasRenderer({ alpha: true });
   const light = new AmbientLight(0xffffff);
   let camera;
-  let sphere;
+  let triangle;
 
   function initScene() {
     const doc = document.getElementById(elementId);
@@ -28,7 +28,7 @@ export default function createSphere(elementId) {
      * 4. far
      */
     camera = new PerspectiveCamera(
-      35,
+      2,
       1,
       1,
       1000);
@@ -37,30 +37,20 @@ export default function createSphere(elementId) {
 
     scene.add(camera);
 
+    const triangleGeometry = new Geometry();
+    triangleGeometry.vertices.push(new Vector3(0.0, 1.0, 0.0));
+    triangleGeometry.vertices.push(new Vector3(-1.0, -1.0, 0.0));
+    triangleGeometry.vertices.push(new Vector3(1.0, -1.0, 0.0));
+    triangleGeometry.faces.push(new Face3(0, 1, 2));
 
-    /**
-     * Meshes
-     * Vertices: positions in space defines as x, y, z coordinates.
-     * Faces: connect vertices together
-     */
-    const material = new MeshBasicMaterial({
-      color: 'red',
-      wireframe: true
-    });
-
-    sphere = new Mesh(
-      new SphereGeometry(15, 16, 16),
-      material
-    );
-
-    sphere.name = 'ensio';
-
-    scene.add(sphere);
+    triangle = new Mesh(triangleGeometry);
+    triangle.color = 'pink';
+    scene.add(triangle);
   }
 
   function render() {
-    sphere.rotation.y += 0.01;
-    sphere.rotation.x += 0.01;
+    triangle.rotation.y += 0.01;
+    triangle.rotation.x += 0.01;
     renderer.render(scene, camera);
     /**
      * https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame

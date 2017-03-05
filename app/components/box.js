@@ -6,7 +6,8 @@ import {
 
 export default function createBox(elementId) {
   const scene = new Scene();
-  const renderer = window.WebGLRenderingContext ? new WebGLRenderer() : new CanvasRenderer();
+  const renderer = window.WebGLRenderingContext ?
+  new WebGLRenderer({ alpha: true }) : new CanvasRenderer({ alpha: true });
   const light = new AmbientLight(0xffffff);
   let camera;
   let box;
