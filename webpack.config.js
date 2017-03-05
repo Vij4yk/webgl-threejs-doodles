@@ -29,13 +29,17 @@ module.exports = {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'app'),
         loaders: [
-          'style',// inserts raw css into styles elements.
+          'style', // inserts raw css into styles elements.
           'css', // css-loader parses css files resolves url() expressions.
           'sass'
         ]
       },
-      // { test: /\.css$/, include: path.resolve(__dirname, 'app'), loader: 'style-loader!css-loader' },
-      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' }
+      {
+        test: /\.js[x]?$/,
+        include: path.resolve(__dirname, 'app'),
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
     ]
   },
   resolve: {
