@@ -3,11 +3,17 @@
 
 
 body {
-  background: pink;
+  background: rgba(black, 0.8);
 }
 
 .mld-layout_header , .mdl-layout__header-row {
   background-color: midnightblue !important;
+}
+
+.content-grid div {
+  min-height: 300px;
+  background: rgba(black, 0.2);
+  text-align: center;
 }
 
 
