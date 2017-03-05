@@ -50,20 +50,21 @@ export default function createTriangle(elementId) {
   }
 
   function render() {
-
     // 300 x 300
-    //triangle.position.y += 0.01;
+    // triangle.position.y += 0.01;
     if (triangle.position.x <= 0.75 && direction === 1) {
       triangle.position.x += 0.01;
     } else {
       direction = 2;
-      if (triangle.position.x <= - 0.75) {
+      if (triangle.position.x <= -0.75) {
         direction = 1;
       } else {
         triangle.position.x -= 0.01;
       }
     }
+
     renderer.render(scene, camera);
+
     /**
      * https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
      * The window.requestAnimationFrame() method tells the browser that
