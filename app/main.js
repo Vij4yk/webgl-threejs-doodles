@@ -2,7 +2,7 @@
 
 import { Scene, WebGLRenderer, CanvasRenderer,
   AmbientLight, PerspectiveCamera, Mesh,
-  BoxGeometry, MeshBasicMaterial } from './three';
+  BoxGeometry, MeshBasicMaterial } from 'three';
 
 (function () {
   var scene = new Scene();
