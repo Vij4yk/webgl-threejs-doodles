@@ -15,60 +15,73 @@ setTimeout(() => {
 
 console.log(window.WebGLRenderingContext);
 
-// require('./App.css');
+export default class App extends React.Component {
 
-export default () =>
-  <div className="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header className="mdl-layout__header mdl-layout__header--transparent">
-      <div className="mdl-layout__header-row">
+  constructor() {
+    super();
+    console.log('initiating App');
+  }
 
-        <span className="mdl-layout-title">WebGL & Three.js demo</span>
-        {/*  Add spacer, to align navigation to the right */}
-        <div className="mdl-layout-spacer" />
-        {/*  Navigation */}
-        {/* <nav className="mdl-navigation">
+  render() {
+    return (<div className="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header className="mdl-layout__header mdl-layout__header--transparent">
+        <div className="mdl-layout__header-row">
+
+          <span className="mdl-layout-title">WebGL & Three.js demo</span>
+          {/*  Add spacer, to align navigation to the right */}
+          <div className="mdl-layout-spacer" />
+          {/*  Navigation */}
+          {/* <nav className="mdl-navigation">
           <a className="mdl-navigation__link" href="">Link</a>
           <a className="mdl-navigation__link" href="">Link</a>
           <a className="mdl-navigation__link" href="">Link</a>
           <a className="mdl-navigation__link" href="">Link</a>
         </nav> */}
-      </div>
-    </header>
+        </div>
+      </header>
 
-    <div className="mdl-layout__drawer">
-      <span className="mdl-layout-title">WebGL & Three.js demo</span>
-      {/* <nav className="mdl-navigation">
+      <div className="mdl-layout__drawer">
+        <span className="mdl-layout-title">WebGL & Three.js demo</span>
+        {/* <nav className="mdl-navigation">
         <a className="mdl-navigation__link" href="">Link</a>
         <a className="mdl-navigation__link" href="">Link</a>
         <a className="mdl-navigation__link" href="">Link</a>
         <a className="mdl-navigation__link" href="">Link</a>
       </nav>*/}
-    </div>
-
-    <main className="mdl-layout__content">
-
-      <div className="content-grid mdl-grid">
-        <div className="mdl-cell mdl-cell--6-col">
-          <span>three.BoxGeometry</span>
-          <div id="webgl-container-1" />
-        </div>
-        <div className="mdl-cell mdl-cell--6-col">
-          <span>three.SphereGeometry</span>
-          <div id="webgl-container-2" />
-        </div>
-        <div className="mdl-cell mdl-cell--6-col">
-          <span>custom three.Geometry</span>
-          <div id="webgl-container-3" />
-        </div>
-        <div className="mdl-cell mdl-cell--6-col">
-          <span>imported example model</span>
-          <div id="webgl-container-4" />
-        </div>
       </div>
-    </main>
 
-  </div>
-  ;
+      <main className="mdl-layout__content">
+
+        <div className="content-grid mdl-grid">
+          <div className="mdl-cell mdl-cell--6-col">
+            <span>three.BoxGeometry</span>
+            <div id="webgl-container-1" />
+          </div>
+          <div className="mdl-cell mdl-cell--6-col">
+            <span>three.SphereGeometry</span>
+            <div id="webgl-container-2" />
+          </div>
+          <div className="mdl-cell mdl-cell--6-col">
+            <span>custom three.Geometry</span>
+            <div id="webgl-container-3" />
+          </div>
+          <div className="mdl-cell mdl-cell--6-col">
+            <span>imported example model</span>
+            <div id="webgl-container-4" />
+          </div>
+        </div>
+      </main>
+
+    </div>);
+  }
+}
+
+// export default React.createClass({
+//   render: () => {
+//     return (
+//       )
+//   }
+// });
 
 /*
 export default class App extends React.Component {
