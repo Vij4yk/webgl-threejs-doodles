@@ -11,6 +11,12 @@ export default class NavBar extends React.Component {
     console.log('initiating App');
   }
 
+  shouldComponentUpdate() {
+    // You can access `this.props` and `this.state` here
+    // This function should return a boolean, whether the component should re-render.
+    return false;
+  }
+
   render() {
     return (
       <div>

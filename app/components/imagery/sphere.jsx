@@ -19,6 +19,12 @@ export default class Sphere extends React.Component {
     this.createSphere(this.id);
   }
 
+  shouldComponentUpdate() {
+    // You can access `this.props` and `this.state` here
+    // This function should return a boolean, whether the component should re-render.
+    return false;
+  }
+
   createSphere(elementId) {
     const scene = new Scene();
     const renderer = window.WebGLRenderingContext ?

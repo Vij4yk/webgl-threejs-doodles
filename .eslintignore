@@ -3,3 +3,4 @@ node_modules/**
 **/*.html
 /app/assets/*.**
 /app/components/generic/ColladaLoader.js
+/server/githubClient.js
