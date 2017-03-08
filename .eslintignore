@@ -2,4 +2,4 @@ node_modules/**
 **/*.css
 **/*.html
 /app/assets/*.**
-/app/components/ColladaLoader.js
+/app/components/generic/ColladaLoader.js
