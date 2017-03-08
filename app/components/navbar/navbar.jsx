@@ -1,4 +1,7 @@
+
 import React from 'react';
+
+require('./navbar.scss');
 
 export default class NavBar extends React.Component {
 
@@ -17,12 +20,10 @@ export default class NavBar extends React.Component {
             {/*  Add spacer, to align navigation to the right */}
             <div className="mdl-layout-spacer" />
             {/*  Navigation */}
-            {/* <nav className="mdl-navigation">
-              <a className="mdl-navigation__link" href="">Link</a>
-              <a className="mdl-navigation__link" href="">Link</a>
-              <a className="mdl-navigation__link" href="">Link</a>
-              <a className="mdl-navigation__link" href="">Link</a>
-            </nav> */}
+            <nav className="mdl-navigation">
+              <a className="mdl-navigation__link" href="">Home</a>
+              <a className="mdl-navigation__link" href="">About</a>
+            </nav>
           </div>
         </header>
         <div className="mdl-layout__drawer">
