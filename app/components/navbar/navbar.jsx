@@ -21,8 +21,8 @@ export default class NavBar extends React.Component {
             <div className="mdl-layout-spacer" />
             {/*  Navigation */}
             <nav className="mdl-navigation">
-              <a className="mdl-navigation__link" href="">Home</a>
-              <a className="mdl-navigation__link" href="">About</a>
+              <a className="mdl-navigation__link" href="gallery">Gallery</a>
+              <a className="mdl-navigation__link" href="about">About</a>
             </nav>
           </div>
         </header>

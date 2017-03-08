@@ -1,6 +1,11 @@
+
 import React from 'react';
+// Import routing components
+import { Router, Route, browserHistory } from 'react-router';
+
 import NavBar from './navbar/navbar';
 import Gallery from './gallery/gallery';
+import About from './about/about';
 
 export default class App extends React.Component {
 
@@ -13,9 +18,14 @@ export default class App extends React.Component {
     return (
       <div className="demo-layout-transparent mdl-layout mdl-js-layout">
         <NavBar />
+
         <div className="demo-layout-transparent mdl-layout mdl-js-layout">
           <main className="mdl-layout__content">
-            <Gallery />
+            <Router history={browserHistory} >
+              <Route path="/" component={Gallery} />
+              <Route path="/gallery" component={Gallery} />
+              <Route path="/about" component={About} />
+            </Router>
           </main>
         </div>
       </div>);
