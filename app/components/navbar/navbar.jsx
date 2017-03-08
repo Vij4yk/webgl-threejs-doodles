@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Sphere from '../imagery/sphere';
 
 require('./navbar.scss');
 
@@ -15,7 +16,7 @@ export default class NavBar extends React.Component {
       <div>
         <header className="mdl-layout__header mdl-layout__header--transparent">
           <div className="mdl-layout__header-row">
-
+            <Sphere />
             <span className="mdl-layout-title">WebGL & Three.js demo</span>
             {/*  Add spacer, to align navigation to the right */}
             <div className="mdl-layout-spacer" />
