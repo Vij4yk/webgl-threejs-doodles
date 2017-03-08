@@ -6,6 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import NavBar from './navbar/navbar';
 import Gallery from './gallery/gallery';
 import About from './about/about';
+import Github from './github/github';
 
 export default class App extends React.Component {
 
@@ -25,6 +26,7 @@ export default class App extends React.Component {
               <Route path="/" component={Gallery} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/about" component={About} />
+              <Route path="/github" component={Github} />
             </Router>
           </main>
         </div>

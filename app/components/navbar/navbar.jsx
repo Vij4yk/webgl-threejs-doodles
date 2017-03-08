@@ -6,11 +6,6 @@ require('./navbar.scss');
 
 export default class NavBar extends React.Component {
 
-  constructor() {
-    super();
-    console.log('initiating App');
-  }
-
   shouldComponentUpdate() {
     // You can access `this.props` and `this.state` here
     // This function should return a boolean, whether the component should re-render.
@@ -30,6 +25,7 @@ export default class NavBar extends React.Component {
             <nav className="mdl-navigation">
               <a className="mdl-navigation__link" href="gallery">Gallery</a>
               <a className="mdl-navigation__link" href="about">About</a>
+              <a className="mdl-navigation__link" href="github">Github</a>
             </nav>
           </div>
         </header>

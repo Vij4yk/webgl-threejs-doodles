@@ -18,6 +18,10 @@ function handleRequest(request, response) {
     .then(res => {
       const repos = _.map(res.data, repo => repo.name);
       console.log(repos);
+      response.writeHead(200, {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      });
       return response.end(JSON.stringify(repos));
     })
     .catch(e => {
