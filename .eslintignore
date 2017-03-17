@@ -4,3 +4,4 @@ node_modules/**
 /app/assets/*.**
 /app/components/generic/ColladaLoader.js
 /server/githubClient.js
+/build

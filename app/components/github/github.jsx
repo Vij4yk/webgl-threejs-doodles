@@ -1,8 +1,9 @@
 
-
 import React from 'react';
 import axios from 'axios';
+import _ from 'lodash';
 
+import Repository from './repository';
 
 export default class GitHub extends React.Component {
 
@@ -10,16 +11,31 @@ export default class GitHub extends React.Component {
     super();
     axios.get('http://localhost:7203').then((res) => {
       this.repositories = res.data;
-      console.log(res.data);
+      this.forceUpdate();
     })
-    .catch((err) => {
-      console.log('Data query failed', err);
-    });
+      .catch((err) => {
+        console.log('Data query failed', err);
+      });
 
     console.log('initiating GitHub');
   }
 
+  setInitialState() {
+    console.log('setInitialState');
+    return {};
+  }
+  createRepositories() {
+    return _.map(this.repositories, (n, i) => (<Repository key={i} name={n} />));
+  }
+
   render() {
+    if (this.repositories) {
+      return (
+        <div>
+          {this.createRepositories()}
+        </div>
+      );
+    }
     return (
       <div>
         <p>Make sure node server is running.</p>

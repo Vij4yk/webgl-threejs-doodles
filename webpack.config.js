@@ -9,11 +9,11 @@ module.exports = {
     inline: true,
     progress: true,
     contentBase: './app',
-    port: 8080
+    port: 3000
   },
   entry: [
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:3000',
     path.resolve(__dirname, 'app/main.jsx'),
     path.resolve(__dirname, 'app/main.scss')
   ],
@@ -53,6 +53,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+    new OpenBrowserPlugin({ url: 'http://localhost:3000' })
   ]
 };

@@ -2,8 +2,9 @@
 const ghc = require('./githubClient');
 const http = require('http');
 const _ = require('lodash');
+const path = require('path');
 
-require('dotenv').load({ path: '../local.env' });
+require('dotenv').load({ path: path.resolve(__dirname, '../local.env') });
 
 const githubCliEnterprise = new ghc.GitHubClient({
   baseUri: 'https://api.github.com',
@@ -45,3 +46,4 @@ githubCliEnterprise.getData({ path: `/users/${handle}/repos` })
   .catch(e => {
     console.log('error', e);
   });
+
