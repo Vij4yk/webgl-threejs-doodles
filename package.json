@@ -59,13 +59,6 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "1.x"
   },
-  "keywords": [
-    "es6",
-    "web app",
-    "boilerplate"
-  ],
-  "author": "Ruan Yifeng",
-  "license": "MIT",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
